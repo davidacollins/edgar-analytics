@@ -2,6 +2,7 @@
 Simulates a continuous data stream identifying SEC document retrieval sessions on EDGAR
 
 SUMMARIZATION APPROACH:
+
 A single WHILE loop iterates through the data in the log.csv file, and does so one line at a time.  In keeping with the posted requirements, one line of data is read and processed before the next line of data is read.  As a trade-off between keeping the connection to the input file open and maximizing speed, the 'read file open' connection is closed once a single line is read.  Therefore, when the next line is read, all of the previous lines need to be reread to return to the appropriate place in the log.csv file.
 
 Functions are grouped into modules by their utility: input, output, and error catching.  Given the small size of the application, the preprocessing files are kept in the main module.
