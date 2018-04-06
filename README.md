@@ -1,7 +1,7 @@
 # edgar-analytics
 Simulates a continuous data stream identifying SEC document retrieval sessions on EDGAR
 
-Sessionization.py has a hard limit of reading 1000 lines in log.csv as a redundant precaution against an infinite WHILE loop.
+Sessionization.py has a hard limit of reading 1000 lines in log.csv as a redundant precaution against an infinite WHILE loop.  If you need to test with a larger log.csv file, then you will need to modify line 29 of sessionization.py.
 
 Damaged or incomplete data is handled by logging the damaged/incomplete record to a separate file: exceptions.txt, and descriptively identifying the problem.  This file, exceptions.txt, is produced when I run the tests in my directory structure, but is not produced when I run the tests in your directory structure.  Yet, all of the tests still pass in your directory structure.
 
